@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.15)
-project(temp-monitor VERSION 1.0.0 LANGUAGES CXX)
+project(temp-monitor VERSION 1.0.0 LANGUAGES C)
 
-# Set C++ standard
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+# Set C standard
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_C_EXTENSIONS OFF)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Compiler warnings
@@ -16,17 +16,16 @@ endif()
 
 # Collect all source files
 file(GLOB_RECURSE SOURCES
-    "src/core/*.cpp"
-    "src/networking/*.cpp"
-    "src/utils/*.cpp"
+    "src/core/*.c"
+    "src/networking/*.c"
+    "src/utils/*.c"
 )
 
-# Remove main.cpp from SOURCES for potential library build
-list(FILTER SOURCES EXCLUDE REGEX ".*main\\.cpp$")
+list(FILTER SOURCES EXCLUDE REGEX ".*main\\.c$")
 
 # Create executable
 add_executable(${PROJECT_NAME}
-    src/core/main.cpp
+    src/core/main.c
     ${SOURCES}
 )
 

@@ -1,7 +1,6 @@
-#pragma once
+#ifndef CPU_TEMP_H
+#define CPU_TEMP_H
 
-class CpuTemperature {
+double readTemperatureCelcius(void);
 
-public:
-  double readTemperatureCelcius();
-};
+#endif
