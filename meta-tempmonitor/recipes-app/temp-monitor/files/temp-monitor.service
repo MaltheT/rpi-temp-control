@@ -1,0 +1,12 @@
+[Unit]
+Description=Temperature Control Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/temp-monitor
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -13,12 +13,11 @@ SYSTEMD_SERVICE:${PN} = "wpa_supplicant@wlan0.service"
 SYSTEMD_AUTO_ENABLE = "enable"
 
 do_install() {
-    install -d ${D}${sysconfdir}/wpa_suplicant
-    install -m 0600 ${WORKDIR}/wpa_supplicant-wlan0.conf ${D}${sysconfdir}/wpa_suplicant/wpa_supplicant-wlan0.conf
-
-    install -d ${D}${systemd_system_unidir}
-    install -m 0644 ${WORKDIR}/wpa_supplicant@wlan0.service ${D}${systemd_system_unidir}/
+    install -d ${D}${sysconfdir}/wpa_supplicant
+    install -m 0600 ${WORKDIR}/wpa_supplicant-wlan0.conf ${D}${sysconfdir}/wpa_supplicant/wpa_supplicant-wlan0.conf
+    install -d ${D}${systemd_system_unitdir}
+    install -m 0644 ${WORKDIR}/wpa_supplicant@wlan0.service ${D}${systemd_system_unitdir}/
 }
 
 FILES:${PN} = "${sysconfdir}/wpa_supplicant/wpa_supplicant-wlan0.conf \
-${systemd_system_unidir}/wpa_supplicant@wlan0.service"
+${systemd_system_unitdir}/wpa_supplicant@wlan0.service"
