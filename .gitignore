@@ -7,4 +7,3 @@ temp-control
 compile_commands.json
 .vscode/
 .idea/
-Makefile
