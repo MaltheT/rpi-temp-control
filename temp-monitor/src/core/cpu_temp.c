@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 double readTemperatureCelcius(void) {
-  FILE *tempfile = fopen("/sys/class/thermal_zone0/temp", "r");
+  FILE *tempfile = fopen("/sys/class/thermal/thermal_zone0/temp", "r");
 
   if (!tempfile) {
     printf("error reading the temperature file\n");

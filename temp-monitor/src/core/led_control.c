@@ -2,7 +2,7 @@
 #include <temp-monitor/core/led_control.h>
 
 void turnOffLed(void) {
-  FILE *ledfile = fopen("/sys/class/leds/ACT/brightness", "r");
+  FILE *ledfile = fopen("/sys/class/leds/ACT/brightness", "w");
 
   if (!ledfile) {
     printf("error reading the LED file\n");
@@ -15,7 +15,7 @@ void turnOffLed(void) {
 }
 
 void turnOnLed(void) {
-  FILE *ledfile = fopen("/sys/class/leds/ACT/brightness", "r");
+  FILE *ledfile = fopen("/sys/class/leds/ACT/brightness", "w");
 
   if (!ledfile) {
     printf("error reading the LED file\n");
