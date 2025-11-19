@@ -1,11 +1,11 @@
 [Unit]
-Desciption=WPA supplicant for %I
+Description=WPA supplicant for %I
 After=sys-subsystem-net-devices-%i.device
 Wants=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/sbin/wpa_supplicant -c/etc/wpa_supplicant/wpa_supplicant-%I.conf -i%I
+ExecStart=/usr/sbin/wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant-%I.conf -i %I
 
 [Install]
 WantedBy=multi-user.target
