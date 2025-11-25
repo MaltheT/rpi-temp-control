@@ -1,5 +1,8 @@
 # Welcome
-In this project I experiment with the Yocto Project to build custom Linux and services for my raspberrypi5. In this project simple C service blinks the red PWR led of the raspberrypi5 based on the current temperature of the CPU.
+In this project I experiment with the Yocto Project to build custom Linux and services for my raspberrypi5. In this project simple C service blinks the red PWR led of the raspberrypi5 based on the current temperature of the CPU. In the following video i use the `yes > /dev/null &` to trigger the CPU to pretend-print 'y' as fast as possible. This causes the CPU temperature to rise and the red LED blinks faster.
+
+[![Watch the demo](https://img.youtube.com/vi/laiemtF5zLs/0.jpg)](https://www.youtube.com/watch?v=laiemtF5zLs)
+
 
 ## Learning outcomes
 
